@@ -54,8 +54,9 @@ def send_email():
     if not is_saturday():
         return
     content = get_email_content()
+    print(content)
     message = MIMEText(content, "plain", MAIL_ENCODING)
-    message["From"] = Header("Unknown", MAIL_ENCODING)
+    message["From"] = Header("weekly-bot", MAIL_ENCODING)
     message["To"] = Header("Unknown")
     message["Subject"] = Header("weekly", MAIL_ENCODING)
     try:
