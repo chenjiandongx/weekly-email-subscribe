@@ -11,6 +11,8 @@ from email.mime.text import MIMEText
 import requests
 from tenacity import retry, stop_after_attempt
 
+from receivers import MAIL_RECEIVER
+
 START_URL = "https://github.com/ruanyf/weekly"
 HEADERS = {
     "X-Requested-With": "XMLHttpRequest",
@@ -23,7 +25,6 @@ MAIL_HOST = os.environ.get("MAIL_HOST")
 MAIL_USER = os.environ.get("MAIL_USER")
 MAIL_PASS = os.environ.get("MAIL_PASS")
 MAIL_SENDER = os.environ.get("MAIL_SENDER")
-MAIL_RECEIVER = os.environ.get("MAIL_RECEIVER")
 
 MAIL_ENCODING = "utf8"
 
@@ -74,7 +75,7 @@ def send_email():
     try:
         smtp_obj = smtplib.SMTP_SSL(MAIL_HOST)
         smtp_obj.login(MAIL_USER, MAIL_PASS)
-        smtp_obj.sendmail(MAIL_SENDER, [MAIL_RECEIVER], message.as_string())
+        smtp_obj.sendmail(MAIL_SENDER, MAIL_RECEIVER, message.as_string())
         smtp_obj.quit()
     except Exception as e:
         print(e)

@@ -6,5 +6,7 @@
 
 ![](https://user-images.githubusercontent.com/19553554/47258124-3e16d980-d4c9-11e8-8f48-0003e7297341.png)
 
+也想订阅的开发者可以在 receivers.py 下追加自己的邮箱哈。
+
 ### License
 MIT [©chenjiandongx](https://github.com/chenjiandongx)
