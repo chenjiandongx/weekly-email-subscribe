@@ -1,0 +1,14 @@
+language: python
+sudo: enabled
+notifications:
+  email:
+    recipients:
+      - chenjiandongx@qq.com
+    on_success: change # default: change
+    on_failure: always # default: always
+python:
+  - 3.6
+before_install:
+  - pip install -r requirements.txt
+script:
+  - python3 core.py

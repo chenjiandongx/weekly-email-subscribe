@@ -51,6 +51,8 @@ def send_email():
     """
     发送邮件
     """
+    if not is_saturday():
+        return
     content = get_email_content()
     message = MIMEText(content, "plain", MAIL_ENCODING)
     message["From"] = Header("Unknown", MAIL_ENCODING)
