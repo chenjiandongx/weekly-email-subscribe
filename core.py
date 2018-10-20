@@ -48,9 +48,13 @@ def get_email_content():
         <html lang="en">
         <head>
             <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
         </head>
         <body>
-            <a href="{0}">📅 阮一峰技术周刊{1}</a>
+            <div>
+                <a href="{0}">📅 阮一峰技术周刊{1}</a>
+            <div>
         </body>
         </html>
     """
