@@ -11,7 +11,6 @@ from email.mime.text import MIMEText
 import requests
 from tenacity import retry, stop_after_attempt
 
-GITHUB_URL = "https://github.com/"
 START_URL = "https://github.com/ruanyf/weekly"
 HEADERS = {
     "X-Requested-With": "XMLHttpRequest",
@@ -45,7 +44,17 @@ def get_email_content():
     result = re.findall(r'<a href="(.*?\.md)">(.*?)</a>', resp)
     url, num = result[0]
 
-    return "📅 阮一峰技术周刊{0}\n🔎 {1}".format(num, GITHUB_URL + url)
+    html = """
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+        </head>
+        <body>
+            <a href="{0}">📅 阮一峰技术周刊{1}</a>
+        </body>
+        </html>
+    """
+    return html.format("https://github.com/" + url, num)
 
 
 def send_email():
@@ -56,8 +65,6 @@ def send_email():
         return
 
     content = get_email_content()
-    if not content:
-        return
     message = MIMEText(content, "plain", MAIL_ENCODING)
     message["From"] = Header("weekly-bot", MAIL_ENCODING)
     message["To"] = Header("Reader")
