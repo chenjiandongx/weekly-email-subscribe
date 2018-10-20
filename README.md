@@ -4,5 +4,7 @@
 
 觉得阮一峰老师的 [技术分享周刊](https://github.com/ruanyf/weekly) 不错，想持续关注，watch 了项目后 PR, ISSUE 等都会邮件通知，有点不喜欢，就自己写了脚本，利用 travis 提供的服务器每周邮件订阅通知。
 
+![](https://user-images.githubusercontent.com/19553554/47258124-3e16d980-d4c9-11e8-8f48-0003e7297341.png)
+
 ### License
 MIT [©chenjiandongx](https://github.com/chenjiandongx)
