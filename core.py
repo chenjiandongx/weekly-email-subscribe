@@ -1,3 +1,4 @@
+# !/usr/bin/env python
 # coding=utf-8
 
 import datetime
@@ -53,11 +54,13 @@ def send_email():
     """
     if not is_saturday():
         return
+
     content = get_email_content()
-    print(content)
+    if not content:
+        return
     message = MIMEText(content, "plain", MAIL_ENCODING)
     message["From"] = Header("weekly-bot", MAIL_ENCODING)
-    message["To"] = Header("Unknown")
+    message["To"] = Header("Reader")
     message["Subject"] = Header("weekly", MAIL_ENCODING)
     try:
         smtp_obj = smtplib.SMTP_SSL(MAIL_HOST)
