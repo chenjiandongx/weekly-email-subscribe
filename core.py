@@ -48,8 +48,6 @@ def get_email_content():
         <html lang="en">
         <head>
             <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta http-equiv="X-UA-Compatible" content="ie=edge">
         </head>
         <body>
             <div>
@@ -69,7 +67,7 @@ def send_email():
         return
 
     content = get_email_content()
-    message = MIMEText(content, "plain", MAIL_ENCODING)
+    message = MIMEText(content, "html", MAIL_ENCODING)
     message["From"] = Header("weekly-bot", MAIL_ENCODING)
     message["To"] = Header("Reader")
     message["Subject"] = Header("weekly", MAIL_ENCODING)
@@ -82,5 +80,5 @@ def send_email():
         print(e)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     send_email()
