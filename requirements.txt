@@ -1,2 +1,4 @@
 requests
 tenacity
+bs4
+lxml

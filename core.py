@@ -9,6 +9,7 @@ from email.header import Header
 from email.mime.text import MIMEText
 
 import requests
+from bs4 import BeautifulSoup
 from tenacity import retry, stop_after_attempt
 
 from receivers import MAIL_RECEIVER
@@ -33,8 +34,8 @@ def is_saturday():
     """
     判断是否周六
     """
-    return datetime.datetime.now().weekday() == 5
-
+    # return datetime.datetime.now().weekday() == 5
+    return True
 
 @retry(stop=stop_after_attempt(3))
 def get_email_content():
@@ -45,6 +46,11 @@ def get_email_content():
     result = re.findall(r'<a href="(.*?\.md)">(.*?)</a>', resp)
     url, num = result[0]
 
+    readme_url = "https://github.com/" + url
+    readme_content = requests.get(readme_url, headers=HEADERS).text
+
+    bs = BeautifulSoup(readme_content, "lxml").find("article")
+
     html = """
         <html lang="en">
         <head>
@@ -52,12 +58,13 @@ def get_email_content():
         </head>
         <body>
             <div>
-                <a href="{0}">📅 阮一峰技术周刊{1}</a>
+                <a href="{0}">📅 阮一峰技术周刊{1}</a></br></br>
+                {2}
             <div>
         </body>
         </html>
     """
-    return html.format("https://github.com/" + url, num)
+    return html.format(readme_url, num, bs)
 
 
 def send_email():
