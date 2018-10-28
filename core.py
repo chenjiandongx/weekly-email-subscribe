@@ -34,8 +34,8 @@ def is_saturday():
     """
     判断是否周六
     """
-    # return datetime.datetime.now().weekday() == 5
-    return True
+    return datetime.datetime.now().weekday() == 5
+
 
 @retry(stop=stop_after_attempt(3))
 def get_email_content():
