@@ -8,7 +8,9 @@
     <img width="50%" src="https://user-images.githubusercontent.com/19553554/47614521-0832b000-dadc-11e8-9994-0951b75cae25.png">
 </div>
 
-也想订阅的开发者可以在 receivers.py 下追加自己的邮箱哈，追加后提交 PR，或者自己利用 Travis 提供的服务发送邮件。
+也想订阅的开发者可以在 receivers.py 下追加自己的邮箱哈，追加后提交 PR，把邮箱发 ISSUE 里也是可以的，我会把你加上。或者自己利用 Travis 提供的服务发送邮件。
+
+**注意：请不要在周六提交 PR，因为提交 PR 会运行 CI，就会再重新给每个人发送一次邮件！！！**
 
 ### License
 
