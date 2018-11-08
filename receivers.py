@@ -10,4 +10,5 @@ MAIL_RECEIVER = [
     "714614401@qq.com",
     "dengyg200891@163.com",   
     "adoyle.h@gmail.com",
+    "694093637@qq.com"
 ]
