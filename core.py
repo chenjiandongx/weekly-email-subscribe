@@ -30,7 +30,7 @@ MAIL_SENDER = os.environ.get("MAIL_SENDER")
 MAIL_ENCODING = "utf8"
 
 
-def is_saturday():
+def is_friday():
     """
     判断是否周五
     """
@@ -71,7 +71,7 @@ def send_email():
     """
     发送邮件
     """
-    if not is_saturday():
+    if not is_friday():
         return
 
     content = get_email_content()
