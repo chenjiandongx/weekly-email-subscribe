@@ -32,9 +32,9 @@ MAIL_ENCODING = "utf8"
 
 def is_saturday():
     """
-    判断是否周六
+    判断是否周五
     """
-    return datetime.datetime.now().weekday() == 5
+    return datetime.datetime.now().weekday() == 4
 
 
 @retry(stop=stop_after_attempt(3))
@@ -46,7 +46,7 @@ def get_email_content():
     result = re.findall(r'<a href="(.*?\.md)">(.*?)</a>', resp)
     url, num = result[0]
 
-    readme_url = "https://github.com/" + url
+    readme_url = "https://github.com" + url
     readme_content = requests.get(readme_url, headers=HEADERS).text
 
     bs = BeautifulSoup(readme_content, "lxml").find("article")
