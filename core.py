@@ -29,14 +29,6 @@ MAIL_SENDER = os.environ.get("MAIL_SENDER")
 
 MAIL_ENCODING = "utf8"
 
-
-def is_friday():
-    """
-    判断是否周五
-    """
-    return datetime.datetime.now().weekday() == 4
-
-
 @retry(stop=stop_after_attempt(3))
 def get_email_content():
     """
@@ -71,7 +63,7 @@ def send_email():
     """
     发送邮件
     """
-    if not is_friday():
+    if datetime.datetime.now().weekday() != 5:
         return
 
     content = get_email_content()
