@@ -46,7 +46,7 @@ def get_email_content():
     result = re.findall(r'<a href="(.*?\.md)">(.*?)</a>', resp)
     url, num = result[0]
 
-    readme_url = "https://github.com/" + url
+    readme_url = "https://github.com" + url
     readme_content = requests.get(readme_url, headers=HEADERS).text
 
     bs = BeautifulSoup(readme_content, "lxml").find("article")

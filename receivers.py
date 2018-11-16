@@ -11,5 +11,11 @@ MAIL_RECEIVER = [
     "dengyg200891@163.com",   
     "adoyle.h@gmail.com",
     "694093637@qq.com",
-    "quick.long@samsung.com"
+    "quick.long@samsung.com",
+    "sp.zhangchao@gmail.com",
+    "29693847@qq.com",
+    "davidxp@vip.126.com",
+    "fjchen7@gmail.com",
+    "xiangggbond@gmail.com",
+    "981852406@qq.com",
 ]
