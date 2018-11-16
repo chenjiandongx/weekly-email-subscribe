@@ -22,4 +22,8 @@ MAIL_RECEIVER = [
     "1191179102@qq.com",
     "baoguoxiao0538@hotmail.com",
     "rarestzhou@gmail.com",
+    "wukairobin@gmail.com",
+    "asdf0210@qq.com",
+    "532473857@qq.com",
+    "1816232121@qq.com",
 ]
