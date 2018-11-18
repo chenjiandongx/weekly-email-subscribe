@@ -30,11 +30,11 @@ MAIL_SENDER = os.environ.get("MAIL_SENDER")
 MAIL_ENCODING = "utf8"
 
 
-def is_saturday():
+def is_friday():
     """
-    判断是否周六
+    判断是否周五
     """
-    return datetime.datetime.now().weekday() == 5
+    return datetime.datetime.now().weekday() == 4
 
 
 @retry(stop=stop_after_attempt(3))
@@ -58,7 +58,7 @@ def get_email_content():
         </head>
         <body>
             <div>
-                <a href="{0}">📅 阮一峰技术周刊{1}</a></br></br>
+                <a href="{0}">阮一峰技术周刊{1} 📅</a></br></br>
                 {2}
             <div>
         </body>
@@ -71,7 +71,7 @@ def send_email():
     """
     发送邮件
     """
-    if not is_saturday():
+    if not is_friday():
         return
 
     content = get_email_content()
