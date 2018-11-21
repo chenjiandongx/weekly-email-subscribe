@@ -39,4 +39,7 @@ MAIL_RECEIVER = [
     "914251253@qq.com",
     "chennansoul@gmail.com",
     "smanuel@163.com",
+    "huai_f@live.cn",
+    "13309011825@163.com",
+    "coprizepiyo@hotmail.com",
 ]
