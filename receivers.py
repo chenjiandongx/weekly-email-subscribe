@@ -30,7 +30,7 @@ MAIL_RECEIVER = [
     "zlmifan@sina.cn",
     "xiexingchao98@gmail.com",
     "2320874815@qq.com",
-    "rockbee@gmail.com"
+    "rockbee@gmail.com",
     "kang011503@163.com",
     "neil.googl@gmail.com",
     "ukuq@qq.com",
