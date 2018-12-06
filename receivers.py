@@ -48,4 +48,6 @@ MAIL_RECEIVER = [
     "freetes@foxmail.com",
     "871625249@qq.com",
     "994605959@qq.com",
+    "meijingmobile@gmail.com",
+    "guoqzuo@gmail.com",
 ]
