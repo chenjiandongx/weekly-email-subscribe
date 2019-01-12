@@ -49,4 +49,5 @@ MAIL_RECEIVER = [
     "994605959@qq.com",
     "meijingmobile@gmail.com",
     "guoqzuo@gmail.com",
+    "1532224549@qq.com",
 ]
