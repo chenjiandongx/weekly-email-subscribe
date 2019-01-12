@@ -16,7 +16,6 @@ MAIL_RECEIVER = [
     "davidxp@vip.126.com",
     "fjchen7@gmail.com",
     "xiangggbond@gmail.com",
-    "981852406@qq.com",
     "857701789@qq.com",
     "1191179102@qq.com",
     "baoguoxiao0538@hotmail.com",
