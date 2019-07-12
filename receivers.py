@@ -54,5 +54,6 @@ MAIL_RECEIVER = [
     "wenbinchen150@icloud.com",
     "240682348@qq.com",
     "kergee@gmail.com",
-    "15596663161@163.com"
+    "15596663161@163.com",
+    "842104779@qq.com"
 ]
