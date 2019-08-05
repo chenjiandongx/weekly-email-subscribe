@@ -21,7 +21,6 @@ MAIL_RECEIVER = [
     "baoguoxiao0538@hotmail.com",
     "rarestzhou@gmail.com",
     "wukairobin@gmail.com",
-    "asdf0210@qq.com",
     "532473857@qq.com",
     "1816232121@qq.com",
     "xilanjianzhu@126.com",
@@ -57,4 +56,5 @@ MAIL_RECEIVER = [
     "15596663161@163.com",
     "842104779@qq.com",
     "jinjinye19950310@gmail.com",
+    "news.list@outlook.com",
 ]
