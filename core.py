@@ -43,7 +43,7 @@ def get_email_content():
     获取邮件内容
     """
     resp = requests.get(START_URL, headers=HEADERS).text
-    result = re.findall(r'<a href=\"(.*?issue-\d.\.md)\">(.*?)</a>', resp)
+    result = re.findall(r'<a href=\"(.*?issue-\d*\.md)\">(.*?)</a>', resp)
     url, num = result[0]
 
     readme_url = "https://github.com" + url
