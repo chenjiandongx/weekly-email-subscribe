@@ -57,4 +57,5 @@ MAIL_RECEIVER = [
     "news.list@outlook.com",
     "vip_319@126.com",
     "antfoot@foxmail.com",
+    "hg_limu@163.com",
 ]
